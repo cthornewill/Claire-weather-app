@@ -110,3 +110,10 @@ button {
 .day p {
   margin-bottom: 0;
 }
+
+.built {
+  margin-top: 20px;
+}
+.built a {
+  color: #fff;
+}
