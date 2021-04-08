@@ -68,12 +68,12 @@ function myLocation(position) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-navigator.geolocation.getCurrentPosition(myLocation);
-
 function loadAPI(searchCity) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchCity.value}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 }
 
 let button = document.querySelector("button");
-button.addEventListener("click", myLocation);
+button.addEventListener("click", function () {
+  navigator.geolocation.getCurrentPosition(myLocation);
+});
